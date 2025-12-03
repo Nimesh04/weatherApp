@@ -3,3 +3,17 @@ body{
     text-align: center;
     background-color: rgb(48, 29, 133);
 }
+
+
+.future-forecast{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.futureElm, .current-temp{
+    border: 2px solid black;
+    border-radius: 0.8rem;
+    color:black;
+    background-color: white;
+}
