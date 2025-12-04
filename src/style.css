@@ -10,13 +10,21 @@
 body{
     color: white;
     text-align: center;
-    background-color: rgb(48, 29, 133);
+    background-color: rgb(21 43 88);
 
 }
 
 
 h1{
     font-size: 3rem;
+}
+
+
+svg{
+    width:30px;
+    height: 30px;
+    fill: white;
+    margin-right: 1rem;
 }
 
 #search{
@@ -35,6 +43,17 @@ h1{
 }
 
 
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.logo > img{
+    max-width: 100px;
+    max-height: 100px;
+}
 
 .search-section{
     display: flex;
@@ -44,15 +63,18 @@ h1{
     margin: 1rem;
 }
 
-.weather-heading{
-    display: inline-flex;
-    align-items: center;
-    gap: 2rem;
-
+#weather-data{
+    padding: 3rem;
 }
 
-.current-temp{
-    font-size: 3rem;
+.weather-heading{
+    display:flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.weather-address,.current-temp{
+    font-size: 2rem;
 }
 
 .future-forecast{
@@ -64,7 +86,7 @@ h1{
 
 .todays-temp{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 1rem 0;
 }
 
@@ -79,9 +101,14 @@ h1{
     padding: 1rem;
 }
 
-svg{
-    width:30px;
-    height: 30px;
-    fill: white;
-    margin-right: 1rem;
+
+.misc-info{
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.misc-info > div{
+    padding: 5rem;
+    border: 2px solid black;
 }

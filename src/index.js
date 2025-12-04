@@ -6,14 +6,9 @@ import {
     currentTemp,
     searchBtn,
     futureForecast,
-    feelsLike,
-    humidity,
-    snow,
-    minTemp,
-    maxTemp,
-    windSpeed
+    tempDiv1
  } from "./query";
-
+import { displayCurrentTemp } from "./renderHtml";
 
 searchBtn.addEventListener("click", () =>{
 
@@ -27,8 +22,6 @@ async function search(searchInput){
     const data = await getWeatherData(searchInput)
     updateHtml(data);
 }
-
-
 
 
 function updateHtml(data){
@@ -48,27 +41,14 @@ function updateHtml(data){
         }else{
             const newDiv = document.createElement("div");
             newDiv.classList.add("futureElm");
-            displayFutureTemp(newDiv, elm);
+            // displayFutureTemp(newDiv, elm);
             futureForecast.append(newDiv);
         }
-        
-        
     });
 
 
 }
 
-
-function displayCurrentTemp(data){
-    currentTemp.textContent = data.temp + 'F';
-    feelsLike.innerHTML = `<h3>Feels like</h3> ${data.feelslike}`;
-    humidity.innerHTML = `<h3>Humidity</h3> ${data.humidity}`;
-    snow.innerHTML = `<h3>Snow</h3> ${data.snow}`;
-    minTemp.innerHTML = `<h3>Min Temp</h3> ${data.feelslikemin}`;
-    maxTemp.innerHTML = `<h3>Max Temp</h3> ${data.feelslikemax}`;
-    windSpeed.innerHTML = `<h3>Wind Speed</h3> ${data.windspeed}`;
-
-}
 
 function displayFutureTemp(elm, data){
     elm.innerHTML = ``;

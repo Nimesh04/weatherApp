@@ -4,13 +4,9 @@ const futureForecast = document.querySelector(".future-forecast");
 const weatherAddress = document.querySelector(".weather-address");
 const currentTemp = document.querySelector(".current-temp");
 
-const feelsLike = document.querySelector(".feels-like");
-const humidity = document.querySelector(".humidity");
-const snow = document.querySelector(".snow");
-const minTemp = document.querySelector(".min-temp");
-const maxTemp = document.querySelector(".max-temp");
-const windSpeed = document.querySelector(".wind-speed");
-
+const tempDiv1 = document.querySelector(".tempDiv-1");
+const tempDiv2 = document.querySelector(".tempDiv-2");
+const tempDiv3 = document.querySelector(".tempDiv-3");
 
 export {
     weatherData,
@@ -18,10 +14,7 @@ export {
     searchBtn,
     currentTemp,
     futureForecast,
-    feelsLike,
-    humidity,
-    snow,
-    minTemp,
-    maxTemp,
-    windSpeed
+    tempDiv1,
+    tempDiv2,
+    tempDiv3
 }
