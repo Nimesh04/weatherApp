@@ -17,7 +17,6 @@ body{
 
 h1{
     font-size: 3rem;
-    margin-top: 2rem;
 }
 
 #search{
@@ -45,18 +44,39 @@ h1{
     margin: 1rem;
 }
 
+.weather-heading{
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.current-temp{
+    font-size: 3rem;
+}
+
 .future-forecast{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(50px, 100px));
     gap: 2rem;
 }
 
 
-.futureElm, .current-temp{
+.todays-temp{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+}
+
+.futureElm, .temperature{
     border: 2px solid black;
     border-radius: 0.8rem;
     color:black;
     background-color: white;
+}
+
+.temperature{
+    padding: 1rem;
 }
 
 svg{

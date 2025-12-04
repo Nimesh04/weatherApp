@@ -9,5 +9,6 @@ export async function getWeatherData(searchInput){
                     .then(function(response){ 
                         return response.json()
                     });
+    console.log("Data: ", data);
     return data;
 }
