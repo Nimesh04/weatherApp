@@ -5,7 +5,7 @@ import {
     weatherData,
     currentTemp,
     searchBtn,
-    futureForecast,
+    // futureForecast,
     tempDiv1
  } from "./query";
 import { displayCurrentTemp } from "./renderHtml";
@@ -33,18 +33,18 @@ function updateHtml(data){
 
     let next15 = data.days;
     
-    futureForecast.innerHTML  = '';
-    next15.forEach(elm =>{
+    // futureForecast.innerHTML  = '';
+    // next15.forEach(elm =>{
 
-        if(elm.datetime == data.days[0].datetime){
+    //     if(elm.datetime == data.days[0].datetime){
             
-        }else{
-            const newDiv = document.createElement("div");
-            newDiv.classList.add("futureElm");
-            // displayFutureTemp(newDiv, elm);
-            futureForecast.append(newDiv);
-        }
-    });
+    //     }else{
+    //         const newDiv = document.createElement("div");
+    //         newDiv.classList.add("futureElm");
+    //         // displayFutureTemp(newDiv, elm);
+    //         futureForecast.append(newDiv);
+    //     }
+    // });
 
 
 }
