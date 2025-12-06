@@ -12,3 +12,13 @@ export async function getWeatherData(searchInput){
     console.log("Data: ", data);
     return data;
 }
+
+
+export async function getNextSevenDays(searchInput){
+    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput}/next7days?unitGroup=metric&key=EM8A3GWWB7J9N3ADDKYG6U4JE`;
+    const data = await fetch(url)
+                        .then(function(response){
+                             return response.json()
+                            });
+    return data.days;
+}   

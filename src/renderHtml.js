@@ -11,7 +11,8 @@ import {
     cards2,
     cards3,
     cards4,
-    cards5
+    cards5,
+    futureForecast
  } from "./query";
 import { format } from 'date-fns';
 
@@ -79,6 +80,35 @@ function createMiscInfo(data){
 }
 
 
+function createTheDiv(data){
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("next-day");
+
+        const topSection = document.createElement("div");
+        const middleSection = document.createElement("div");
+        const bottomSection = document.createElement("div");
+
+        topSection.textContent = format(data.datetime, 'MMMMMM  dd');
+        middleSection.textContent = data.description;
+        bottomSection.innerHTML =  `max: ${data.feelslikemax}\u00B0C <br>min: ${data.feelslikemin}\u00B0C`;
+
+        newDiv.append(topSection, middleSection, bottomSection);
+        futureForecast.append(newDiv);
+}
+
+
+
+export function createNextSevenDays(data){
+    futureForecast.innerHTML = '';
+    data.forEach(element => {
+        if(element.datetime == data[0].datetime){
+
+        }else{
+            createTheDiv(element);
+        }
+        
+    });
+}
 
 
 

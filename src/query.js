@@ -1,6 +1,6 @@
 const weatherData = document.querySelector("#weather-data");
 const searchBtn = document.querySelector("#searchBtn");
-// const futureForecast = document.querySelector(".future-forecast");
+const futureForecast = document.querySelector(".future-forecast");
 const weatherAddress = document.querySelector(".weather-address");
 const currentTemp = document.querySelector(".current-temp");
 
@@ -21,7 +21,7 @@ export {
     weatherAddress,
     searchBtn,
     currentTemp,
-    // futureForecast,
+    futureForecast,
     tempDiv1,
     tempDiv2,
     tempDiv3,
